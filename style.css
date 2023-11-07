@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  display: flex;
+  position: sticky;
+  top: 80px;
+  width: fit-content;
+  background-color: #fff;
+  z-index: 100;
+}
+#header > b {
+  padding: 10px 0;
+  text-align: center;
+  min-width: 100px;
+  border: 1px solid #dfe4e9;
+}
+.row {
+  display: flex;
+}
+.row > b,
+.row > div {
+  padding: 10px 0;
+  min-width: 100px;
+  border: 1px solid #dfe4e9;
+}
+
+.row > b:first-child {
+  text-align: center;
+}
+
+.row > b:first-child {
+  background-color: #fff;
+  position: sticky;
+  left: 0;
+}
+
+#options {
+  padding: 10px;
+  background-color: #ecf0f1;
+  position: sticky;
+  top:0px;
+  left:0px;
+  z-index: 100000000000;
+}
+
+#active-cell {
+  background-color: white;
+  padding: 2px 20px;
+}
+
+#body {
+  width: fit-content;
+}
+
+
+@media screen (min-width:768px){
+  #responsive{
+    width:100vw;
+    height:100vh;
+    overflow:auto;
+  }
+}

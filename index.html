@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcelClone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./menu.css">
+</head>
+<body>
+  <main  id="responsive"style="width: 100vw; margin: auto; height: 100vh; overflow: scroll;">
+<div id="options">
+  <div class="menus">
+    <select id="fontFamilyDropdown" onchange="onChangeFontFamily()">
+  <option value="Times New Roman">Times New Roman</option>
+  <option value="Arial">Arial</option>
+  <option value="Calibri">Calibri</option>
+  <option value="Arial Black">Arial Black</option>
+</select>
+
+    <input placeholder="Enter Font Size" type="text" id="fontSizeInput" onkeyup="onChangeSize()" />
+
+  <div id="bold" onclick="onClickBold(this)">B</div>
+  <div id="italic" onclick="onClickItalic(this)">I</div>
+  <div id="underline"  onclick="onClickUnderline(this)">U</div>
+       <div
+          class="material-icons active-option text-align"
+          data-value="start"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_left
+        </div>
+        <div
+          class="material-icons text-align"
+          data-value="right"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_right
+        </div>
+        <div
+          class="material-icons text-align"
+          data-value="center"
+          onclick="onClickTextAlign(this)"
+        >
+          format_align_center
+        </div>
+        
+<div id="text-color">
+  <label for="color-picker"><span class="material-icons">
+border_color
+</span></label>
+  <input type="color" onchange="onChangeTextColor(this)" id="color-picker" style="width: 0;height: 0;">
+</div>
+<div id="bg-color">
+  <label for="bg-color-picker"><span class="material-icons">
+format_color_fill
+</span></label>
+  <input type="color" onchange="onChangeBackgroundColor(this)" id="bg-color-picker" style="width: 0;height: 0;">
+</div>
+</div>
+ <span id="active-cell" style="position: sticky;left:0">null</span>
+    
+    </div>
+    
+     <div id="header">
+        <b style="position: sticky; left: 0; top: 0; background-color: white">S.No</b>
+      </div>
+      <section id="body"></section>
+      </main>
+      
+     <script src="./options.js"></script> <!--first this js is loaded,  so that whatever varibles/functions presnt in this js can be used in latter js files -->
+     <script src="./index.js"></script>  
+</body>
+</html>
